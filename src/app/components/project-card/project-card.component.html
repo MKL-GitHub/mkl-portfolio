@@ -1,0 +1,26 @@
+<div class="ProjectCard">
+  <h4 class="ProjectCard__name">{{ name }}</h4>
+  <div class="ProjectCard__row">
+    <div class="ProjectCard__imageContainer">
+      <img [src]="imageUrl" />
+    </div>
+    <div class="ProjectCard__right">
+      <div class="ProjectCard__links">
+        <a *ngIf="deploymentUrl" [href]="deploymentUrl" target="_blank"
+          ><img
+            class="ProjectCard__deploymentImage"
+            src="assets/svgs/globe.svg"
+        /></a>
+        <a [href]="githubUrl" target="_blank"
+          ><img src="assets/svgs/github.svg"
+        /></a>
+      </div>
+
+      <ul class="ProjectCard__languages">
+        <li *ngFor="let language of languages">
+          {{ language }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="HomePage__backgroundImageContainer">
+    <img src="assets/images/abstraction2.jpg" />
+  </div>
+
+  <div class="HomePage">
+    <div class="HomePage__left">
+      <h1 class="HomePage__title">
+        Hey there,<br />
+        I'm Mikhail <span>Tkachev</span>
+      </h1>
+      <p class="HomePage__info">I am into <span>web develop!</span></p>
+      <a class="HomePage__projectsLink" routerLink="projects">Projects</a>
+
+      <div class="HomePage__networks">
+        <button (click)="copyGithub('github')">
+          <img class="HomePage__github" src="assets/svgs/github.svg" />
+          <div *ngIf="showCopiedObj === 'github'" class="HomePage__copiedPopUp">
+            Copied!
+          </div>
+        </button>
+        <button (click)="copyPhone('telegram')">
+          <img class="HomePage__telegram" src="assets/svgs/telegram.svg" />
+          <div
+            *ngIf="showCopiedObj === 'telegram'"
+            class="HomePage__copiedPopUp"
+          >
+            Copied!
+          </div>
+        </button>
+        <button (click)="copyPhone('whatsapp')">
+          <img class="HomePage__whatsapp" src="assets/svgs/whatsapp.svg" />
+          <div
+            *ngIf="showCopiedObj === 'whatsapp'"
+            class="HomePage__copiedPopUp"
+          >
+            Copied!
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <div class="HomePage__photoContainer">
+      <img src="assets/images/me.jpg" />
+    </div>
+  </div>
+</div>

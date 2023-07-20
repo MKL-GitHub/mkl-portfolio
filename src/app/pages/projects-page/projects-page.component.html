@@ -1,0 +1,17 @@
+<div class="ProjectsPage">
+  <div class="container">
+    <div class="ProjectsPage__quantity">
+      <strong>{{ projects.length }}</strong> Projects
+    </div>
+    <div class="ProjectsPage__items">
+      <app-project-card
+        *ngFor="let project of projects"
+        [name]="project.name"
+        [imageUrl]="project.imageUrl"
+        [languages]="project.languages"
+        [githubUrl]="project.githubUrl"
+        [deploymentUrl]="project.deploymentUrl"
+      />
+    </div>
+  </div>
+</div>
