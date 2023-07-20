@@ -18,3 +18,11 @@
     width: fit-content;
   }
 }
+
+@media only screen and (max-width: 1050px) {
+  .ProjectsPage {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

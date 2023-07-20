@@ -117,3 +117,54 @@
     font-size: 1.1rem;
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  .HomePage {
+    &__title {
+      font-size: 3.6rem;
+    }
+
+    &__photoContainer {
+      width: 18rem;
+      height: 18rem;
+    }
+
+    &__info {
+      font-size: 2.35rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .HomePage {
+    &__title {
+      font-size: 3.24rem;
+    }
+
+    &__photoContainer {
+      width: 17rem;
+      height: 17rem;
+    }
+
+    &__info {
+      font-size: 2.115rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .HomePage {
+    &__title {
+      font-size: 2.754rem;
+    }
+
+    &__photoContainer {
+      width: 14.45rem;
+      height: 14.45rem;
+    }
+
+    &__info {
+      font-size: 1.798rem;
+    }
+  }
+}
