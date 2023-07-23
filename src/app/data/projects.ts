@@ -2,6 +2,20 @@ import { Languages } from "../enums/languages.enum";
 import { IProject } from "../models/project";
 
 export const projects: IProject[] = [
+  //
+  {
+    name: "business-sector",
+    languages: [
+      Languages.React,
+      Languages.JavaScript,
+      Languages.Redux,
+      Languages.SCSS,
+      Languages.HTML,
+    ],
+    imageUrl: "https://github.com/MKL-GitHub/business-sector/assets/93647476/21a3dc15-c62f-4f26-b94f-99a896e63565",
+    githubUrl: "https://github.com/MKL-GitHub/business-sector",
+    deploymentUrl: "https://business-sector.vercel.app",
+  },
   {
     name: "secret-agents",
     languages: [
