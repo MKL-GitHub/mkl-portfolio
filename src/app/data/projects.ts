@@ -2,7 +2,20 @@ import { Languages } from "../enums/languages.enum";
 import { IProject } from "../models/project";
 
 export const projects: IProject[] = [
-  //
+  {
+    name: "kaspel",
+    languages: [
+      Languages.React,
+      Languages.TypeScript,
+      Languages.Redux,
+      Languages.AntDesign,
+      Languages.SCSS,
+      Languages.HTML,
+    ],
+    imageUrl: "https://github.com/MKL-GitHub/kaspel/assets/93647476/7c423524-62f9-4495-9d9a-43ae6cff7e05",
+    githubUrl: "https://github.com/MKL-GitHub/kaspel",
+    deploymentUrl: "https://kaspel.vercel.app",
+  },
   {
     name: "business-sector",
     languages: [
@@ -11,6 +24,7 @@ export const projects: IProject[] = [
       Languages.Redux,
       Languages.SCSS,
       Languages.HTML,
+      Languages.Webpack,
     ],
     imageUrl: "https://github.com/MKL-GitHub/business-sector/assets/93647476/21a3dc15-c62f-4f26-b94f-99a896e63565",
     githubUrl: "https://github.com/MKL-GitHub/business-sector",

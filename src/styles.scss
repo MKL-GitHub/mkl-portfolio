@@ -43,8 +43,12 @@ $mkl-portfolio-theme: mat.define-light-theme(
     width: 0.7rem;
     height: 0.7rem;
   }
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
   &::-webkit-scrollbar-thumb {
-    background-color: #515151a0;
+    background-color: #757575;
     border: 0.25rem solid transparent;
     background-clip: padding-box;
   }
@@ -52,6 +56,8 @@ $mkl-portfolio-theme: mat.define-light-theme(
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #eee;
+  overflow: hidden;
 }
 
 ul {
@@ -63,16 +69,37 @@ button {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 5rem;
 }
 
-html,
-body {
-  height: 100%;
+@media (max-width: 1300px) {
+  .container {
+    padding: 0 4rem;
+  }
 }
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+@media (max-width: 1000px) {
+  .container {
+    padding: 0 3.5rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    padding: 0 1rem;
+  }
 }

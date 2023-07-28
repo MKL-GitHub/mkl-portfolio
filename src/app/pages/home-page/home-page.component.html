@@ -1,8 +1,4 @@
 <div class="container">
-  <div class="HomePage__backgroundImageContainer">
-    <img src="assets/images/abstraction2.jpg" />
-  </div>
-
   <div class="HomePage">
     <div class="HomePage__left">
       <h1 class="HomePage__title">
@@ -16,7 +12,7 @@
         <button (click)="copyGithub('github')">
           <img class="HomePage__github" src="assets/svgs/github.svg" />
           <div *ngIf="showCopiedObj === 'github'" class="HomePage__copiedPopUp">
-            Copied!
+            Github link copied!
           </div>
         </button>
         <button (click)="copyPhone('telegram')">
@@ -25,7 +21,7 @@
             *ngIf="showCopiedObj === 'telegram'"
             class="HomePage__copiedPopUp"
           >
-            Copied!
+            Telegram number copied!
           </div>
         </button>
         <button (click)="copyPhone('whatsapp')">
@@ -34,7 +30,7 @@
             *ngIf="showCopiedObj === 'whatsapp'"
             class="HomePage__copiedPopUp"
           >
-            Copied!
+            Whatsapp copied!
           </div>
         </button>
       </div>

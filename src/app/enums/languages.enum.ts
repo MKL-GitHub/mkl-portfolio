@@ -11,5 +11,7 @@ export enum Languages {
   ReactNativeTestingLibrary = 'React Native Testing Library',
   Apisauce = 'apisauce',
   Jest = "jest",
-  NextJs = 'Next.js'
+  NextJs = 'Next.js',
+  Webpack = 'Webpack',
+  AntDesign = 'Ant Design'
 }

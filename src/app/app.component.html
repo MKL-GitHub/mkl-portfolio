@@ -1,3 +1,11 @@
+<div class="background">
+  <div class="starContainer">
+    <div *ngFor="let star of stars" class="star"></div>
+  </div>
+</div>
+
 <app-navigation />
 
-<router-outlet />
+<div class="wrapperWithoutNavigation">
+  <router-outlet />
+</div>
