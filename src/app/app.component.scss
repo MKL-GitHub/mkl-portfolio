@@ -1,115 +1,13 @@
-// $total: 200;
-// $time: 10s;
-
-// .wrapper {
-//   height: calc(100vh - 4rem);
-//   // transform-style: preserve-3d;
-//   // perspective: 800px;
-
-//   // background: rgba(0, 0, 0, 0.473);
-//   // background-image: radial-gradient(
-//   //   circle at center,
-//   //   #000000a8 0%,
-//   //   #000000a8 0%,
-//   //   #000000a8 0%,
-//   //   #000000e7 60%
-//   // );
-//   // overflow: hidden;
-//   // filter: blur(50%);
-//   // blur
-// }
-
-// .tri {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   height: 0;
-//   width: 0;
-//   z-index: -1;
-// }
-
-// @for $i from 1 through $total {
-//   $size: random(50) * 1px;
-//   $rotate: random(360) * 1deg;
-//   .tri:nth-child(#{$i}) {
-//     border-top: $size solid hsla(random(360), 100%, 50%, 1);
-//     border-right: $size solid transparent;
-//     border-left: $size solid transparent;
-//     margin-left: -$size/2;
-//     margin-top: -$size/2;
-//     -webkit-filter: grayscale(1);
-//     filter: grayscale(1);
-//     transform: rotate($rotate) translate3d(0, 0, -1500px) scale(0);
-//     animation: anim#{$i} $time infinite linear;
-//     animation-delay: $i * -($time/$total);
-//     opacity: 0;
-//   }
-
-//   @keyframes anim#{$i} {
-//     0% {
-//       opacity: 1;
-//       transform: rotate($rotate * 1.5)
-//         translate3d(random(1000) * 1px, random(1000) * 1px, 1000px) scale(1);
-//     }
-//   }
-// }
-
-//////////////////////////////
-///
-///
-///
-/// //////////////////////////////////////////////////////////////////////////////////
-/// Background Texture ///////////////////////////////////////////////////////////
-
-$line-color: #f2f2f2;
-$point-color: #f8f8f8;
-
-// Mixin for creating diagonal lines pattern
-@mixin diagonal-lines($size: 10px, $angle: 45deg) {
-  background-size: $size $size;
-  background-image: linear-gradient($angle, $line-color 25%, transparent 25%),
-    linear-gradient(-$angle, $line-color 25%, transparent 25%),
-    linear-gradient($angle, transparent 75%, $line-color 75%),
-    linear-gradient(-$angle, transparent 75%, $line-color 75%);
-  background-position: 0 0, 0 $size, $size -$size, -$size 0;
-}
-
-// Mixin for creating a grid of points
-@mixin grid-points($size: 10px) {
-  background-size: $size $size;
-  background-image: radial-gradient(
-      circle,
-      $point-color 0%,
-      $point-color 20%,
-      transparent 20%
-    ),
-    radial-gradient(circle, $point-color 0%, $point-color 20%, transparent 20%);
-  background-position: 0 0, $size / 2 $size / 2;
-}
-
-// Mixin for creating diagonal lines
-@mixin additional-lines($size: 1px, $angle: 30deg, $color: #dcdcdc) {
-  background-size: $size $size;
-  background-image: linear-gradient($angle, $color 25%, transparent 25%),
-    linear-gradient(-$angle, $color 25%, transparent 25%),
-    linear-gradient($angle, transparent 75%, $color 75%),
-    linear-gradient(-$angle, transparent 75%, $color 75%);
-  background-position: 0 0, 0 $size, $size -$size, -$size 0;
-}
-
-//////////////////////////////////////////////////////////////////////////////////
-
 .wrapper {
   height: 100vh;
 }
 
 .wrapperWithoutNavigation {
-  // margin-top: 4rem;
   overflow: auto;
   height: calc(100vh - 4rem);
 }
 
-$shooting-time: 3000ms;
+$shooting-time: 2500ms;
 
 .background {
   position: fixed;
@@ -162,7 +60,7 @@ $shooting-time: 3000ms;
     transform: translateX(50%) rotateZ(-45deg);
   }
 
-  @for $i from 1 through 50 {
+  @for $i from 1 through 60 {
     &:nth-child(#{$i}) {
       $delay: random(9999) + 0ms;
       top: calc(#{random(1600) - 800px});

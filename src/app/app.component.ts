@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mkl-portfolio';
-  stars: any[] = new Array(50);
+  stars: any[] = new Array(60);
 }
