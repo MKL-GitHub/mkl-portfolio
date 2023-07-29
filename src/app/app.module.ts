@@ -10,6 +10,7 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
 import { HttpClientModule } from '@angular/common/http';
 import { FormatDatePipe } from './pipes/format-date.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { } from 'angular-gtag';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    // AngularG
   ],
   providers: [],
   bootstrap: [AppComponent]
