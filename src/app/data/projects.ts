@@ -3,6 +3,22 @@ import { IProject } from "../models/project";
 
 export const projects: IProject[] = [
   {
+    name: "gk-intelogis",
+    languages: [
+      Languages.React,
+      Languages.TypeScript,
+      Languages.ReduxToolkit,
+      Languages.ReduxSaga,
+      Languages.Leaflet,
+      Languages.AntDesign,
+      Languages.SCSS,
+      Languages.HTML,
+    ],
+    imageUrl: "https://github.com/MKL-GitHub/gk-intelogis/assets/93647476/e3c78fee-0270-4da9-a6a6-c3ff798b236c",
+    githubUrl: "https://github.com/MKL-GitHub/gk-intelogis",
+    deploymentUrl: "https://gk-intelogis.vercel.app",
+  },
+  {
     name: "kaspel",
     languages: [
       Languages.React,

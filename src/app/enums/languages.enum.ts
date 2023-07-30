@@ -8,10 +8,14 @@ export enum Languages {
   StyledComponents = 'Styled Components',
   ReactNative = 'React Native',
   Redux = 'Redux',
+  ReduxSaga = 'Redux Saga',
+  ReduxToolkit = 'Redux (toolkit)',
   ReactNativeTestingLibrary = 'React Native Testing Library',
   Apisauce = 'apisauce',
   Jest = "jest",
   NextJs = 'Next.js',
   Webpack = 'Webpack',
-  AntDesign = 'Ant Design'
+  AntDesign = 'Ant Design',
+  Leaflet = 'Leaflet',
+
 }
