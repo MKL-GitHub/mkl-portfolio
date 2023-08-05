@@ -1,0 +1,22 @@
+<nav class="Header">
+  <div class="container">
+    <div class="Header__row">
+      <h1 class="Header__logo">MKL Portfolio</h1>
+      <ul class="Header__links">
+        <li>
+          <a routerLink="">Home</a>
+        </li>
+        <li>
+          <a routerLink="projects">Projects</a>
+        </li>
+      </ul>
+      <app-menu-burger
+        class="Header__menuBurger"
+        [isOpen]="isMenuOpen"
+        [onClick]="onOpenMenu"
+      />
+    </div>
+  </div>
+</nav>
+
+<app-side-menu *ngIf="isMenuOpen" />

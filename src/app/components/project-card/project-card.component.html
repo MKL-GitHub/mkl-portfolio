@@ -23,4 +23,11 @@
       </ul>
     </div>
   </div>
+
+  <div
+    *ngIf="hasLight"
+    class="ProjectCard__light"
+    [style.left.px]="lightX"
+    [style.top.px]="lightY"
+  ></div>
 </div>

@@ -25,10 +25,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     // this.getLocation();
-    this.getIPAddress();
+    // this.getIPAddress();
     // console.log(this.getPlatform());
     // this.postVisiter();
-    this.getVisiters();
+    // this.getVisiters();
   }
 
   handleRouteEvents() {
@@ -42,9 +42,9 @@ export class AppComponent implements OnInit {
           page_location: this.document.location.href,
         });
 
-        console.log('page_title', title)
-        console.log('page_path', event.urlAfterRedirects)
-        console.log('page_location', this.document.location.href)
+        // console.log('page_title', title)
+        // console.log('page_path', event.urlAfterRedirects)
+        // console.log('page_location', this.document.location.href)
       }
     })
   }

@@ -1,24 +1,16 @@
-.ProjectsPage {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  padding: 1.5rem;
-  overflow: scroll;
-  // background-color: rgba(255, 255, 255, 0.034);
+@import "mixins";
 
-  // background-color: blue;
+.ProjectsPage {
+  display: flex;
+  padding: 2rem 0;
 
   &__quantity {
     margin-bottom: 1rem;
-    // background-color: blue;
   }
 
-  &__items {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    // display: flex;
-    // justify-content: space-evenly;
-    flex-wrap: wrap;
+  &__ul {
+    @include colFlex;
+    gap: 2rem;
     gap: 2rem;
     width: fit-content;
   }
@@ -26,7 +18,7 @@
 
 @media only screen and (max-width: 900px) {
   .ProjectsPage {
-    &__items {
+    &__ul {
       grid-template-columns: repeat(1, 1fr);
     }
   }

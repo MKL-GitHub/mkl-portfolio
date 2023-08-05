@@ -1,0 +1,66 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  &::-webkit-scrollbar {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #404040;
+  }
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #eee;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
+.fadeIn {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.fadeIn.visible {
+  opacity: 1;
+}
+
+@mixin adapt($maxWidth, $containerPadding) {
+  @media (max-width: $maxWidth) {
+    .container {
+      padding: 0 $containerPadding;
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  $maxWidth_: $maxWidth - $i * 60;
+  $containerPadding: 5rem - $i * 0.333;
+
+  @include adapt(#{$maxWidth_}, #{$containerPadding});
+}

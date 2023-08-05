@@ -1,9 +1,34 @@
+@import "mixins";
+
+@mixin glassEffect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid #ffffff1b;
+  transition: background 0.3s ease-in-out;
+
+  &__light {
+    position: absolute;
+    // width: 100px;
+    // height: 100px;
+    width: 1px;
+    height: 1px;
+    box-shadow: 0 0 10rem 5rem #ffffff41;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    background-color: blue;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+  }
+}
+
 .ProjectCard {
-  height: 25rem;
-  background-color: #75757510;
+  aspect-ratio: 9/7;
   padding: 0.5rem;
-  overflow-y: auto;
-  box-shadow: inset 0 0 5rem #3b3b3b3f;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  // transition: 1s;
+
+  @include glassEffect;
 
   &__name {
     text-align: center;
@@ -18,6 +43,7 @@
 
   &__row {
     display: flex;
+    height: 95%;
 
     gap: 0.5rem;
   }
@@ -40,21 +66,15 @@
       max-width: 3rem;
       min-width: 2.8rem;
       padding: 0.5rem;
-      background-color: #7575756c;
       cursor: pointer;
-
-      transition: transform 0.2s;
-
-      &:active {
-        transform: scale(1.1);
-      }
 
       & > img {
         width: 100%;
       }
 
       &:hover {
-        box-shadow: 0 0.13rem 0.15rem #00000077;
+        transform: scale(1.15);
+        border-radius: 50%;
       }
     }
   }
@@ -85,7 +105,9 @@
   }
 
   &__imageContainer {
-    filter: opacity(70%);
+    border-radius: 0.5rem;
+    height: 100%;
+    overflow: hidden;
 
     & > img {
       width: 100%;
@@ -98,9 +120,9 @@
     color: #a1a5b8;
   }
 
-  &:hover {
-    .ProjectCard__imageContainer {
-      filter: none;
-    }
-  }
+  // &:hover {
+  //   .ProjectCard__imageContainer {
+  //     filter: none;
+  //   }
+  // }
 }

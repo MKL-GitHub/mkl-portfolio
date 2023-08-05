@@ -1,0 +1,39 @@
+@import "mixins";
+
+.PageLayout {
+  @include colFlex;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  // margin-right: -1rem;
+  margin-right: -1rem;
+
+  // &__wrapper {
+  //   @include colFlex;
+  //   height: 100vh;
+  //   overflow: auto;
+  // }
+
+  &__content {
+    display: flex;
+    flex: 1;
+    // transition: 2s;
+    // height: 160vh;
+    animation: show 1s forwards;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// @media (max-width: 480px) {
+//   .PageLayout {
+//     height: 87.1vh;
+//   }
+// }

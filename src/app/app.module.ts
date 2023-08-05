@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProjectsPageComponent } from './pages/projects-page/projects-page.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
+import { HeaderComponent } from './components/header/header.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormatDatePipe } from './pipes/format-date.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './components/footer/footer.component';
+import { PageLayoutComponent } from './components/layouts/page-layout/page-layout.component';
+import { MenuBurgerComponent } from './components/menu-burger/menu-burger.component';
+import { SideMenuComponent } from './components/side-menu/side-menu.component';
 // import { } from 'angular-gtag';
 
 @NgModule({
@@ -17,9 +21,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     HomePageComponent,
     ProjectsPageComponent,
-    NavigationComponent,
+    HeaderComponent,
     ProjectCardComponent,
     FormatDatePipe,
+    FooterComponent,
+    PageLayoutComponent,
+    MenuBurgerComponent,
+    SideMenuComponent,
   ],
   imports: [
     BrowserModule,

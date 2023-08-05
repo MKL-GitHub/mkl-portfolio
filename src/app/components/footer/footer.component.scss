@@ -1,0 +1,117 @@
+.Footer {
+  display: flex;
+  align-items: center;
+  // height: 8rem;
+  background-color: #91919125;
+  padding: 1rem 0;
+
+  &__row {
+  }
+
+  &__contacts {
+    // background-color: blue;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    & > li {
+      display: flex;
+      gap: 0.3rem;
+
+      & > span {
+        min-width: 4rem;
+      }
+
+      & > a {
+        text-decoration: underline;
+        cursor: pointer;
+        transition: 300ms;
+        word-break: break-all;
+
+        &:hover {
+          color: white;
+          scale: 1.03;
+        }
+      }
+    }
+  }
+
+  // &__networks {
+  //   position: relative;
+  //   display: flex;
+  //   align-items: center;
+  //   gap: 1rem;
+  //   width: fit-content;
+  //   // transition: 500ms;
+  //   // background-color: white;
+
+  //   & > button {
+  //     position: relative;
+  //     width: 3rem;
+  //     padding: 0.5rem;
+  //     cursor: pointer;
+  //     transition: 300ms;
+
+  //     & img {
+  //       width: 100%;
+  //     }
+
+  //     &:hover {
+  //       background-color: #a3a3a362;
+  //     }
+
+  //     // transition: transform 0.2s;
+  //   }
+  // }
+
+  // &__whatsapp {
+  //   filter: brightness(0) saturate(100%) invert(30%) sepia(64%) saturate(1302%)
+  //     hue-rotate(86deg) brightness(103%) contrast(85%);
+  // }
+
+  // &__telegram {
+  //   filter: brightness(0) saturate(100%) invert(44%) sepia(84%) saturate(501%)
+  //     hue-rotate(156deg) brightness(95%) contrast(93%);
+  // }
+
+  // &__copiedPopUp {
+  //   position: absolute;
+  //   top: -4rem;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   padding: 1rem;
+  //   white-space: nowrap;
+  //   background-color: #46464673;
+
+  //   border-radius: 0.3rem;
+  //   font-size: 0.9rem;
+  //   color: #eee;
+  //   animation: show 1s forwards;
+  // }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 720px) {
+  .Footer {
+    &__contacts {
+      & > li {
+        flex-direction: column;
+        & > span {
+          width: 6.3rem;
+        }
+
+        & > a {
+          cursor: auto;
+        }
+      }
+    }
+  }
+}

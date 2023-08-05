@@ -1,0 +1,9 @@
+@mixin colFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin horCenter {
+  left: 50%;
+  transform: translateX(-50%);
+}
